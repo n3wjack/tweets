@@ -85,7 +85,11 @@ This is @bcrypt's janky twitter replacement.
 ## Setup
 
 - fork https://github.com/diracdeltas/tweets
+<<<<<<< HEAD
 - in your fork:
+=======
+- if you want a "clean" fork that doesn't have any of the helper scripts, do:
+>>>>>>> yan/main
 
 ```
 git reset --hard d10b092
@@ -97,7 +101,11 @@ git push -f origin main
 - to post:
 
 ```
+<<<<<<< HEAD
 git commit -m "your post" --allow-empty
+=======
+git commit -m --allow-empty
+>>>>>>> yan/main
 git push
 ```
 
@@ -109,13 +117,21 @@ git fetch <git name>
 ```
 
 - to follow everybody using GitHub:
+<<<<<<< HEAD
   `./follow-everybody.bash`
+=======
+  `make everybody`
+>>>>>>> yan/main
 
 - to repeat someone else's utterance:
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 git cherry-pick <their commit hash>
+=======
+git cherry-pick -x <their commit hash>
+>>>>>>> yan/main
 =======
 git cherry-pick -x <their commit hash>
 >>>>>>> yan/main
@@ -126,15 +142,25 @@ git cherry-pick -x <their commit hash>
 - to refresh your timeline and view it:
 
 ```
+<<<<<<< HEAD
 git fetch --all && git rev-list --all --remotes --pretty | less
+=======
+make refresh
+make timeline
+>>>>>>> yan/main
 ```
 
 - some alternative ways to view your timeline (use `git show <commit hash>` to
   show the full "tweet"):
 
 ```
+<<<<<<< HEAD
 git log --format="format:%Cred%cd %Cblue%h %Cgreen%cn%Creset: %s" --all --date=iso-local
 git log --graph --all --decorate --oneline
+=======
+make timeline-graph
+make timeline-short
+>>>>>>> yan/main
 ```
 
 - to get verified (GitHub-only):
@@ -146,6 +172,7 @@ git log --graph --all --decorate --oneline
 
 see `encrypt using the public key of a github user` in https://sshenc.sh/ or
 use your favorite key distribution mechanism to get their public key.
+<<<<<<< HEAD
 
 ## Cheatcodes
 
@@ -176,3 +203,5 @@ _OR_
 ```shell
 make timeline-graph
 ```
+=======
+>>>>>>> yan/main
