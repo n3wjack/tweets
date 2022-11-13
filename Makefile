@@ -1,4 +1,4 @@
-.PHONY: go everybody post refresh repost timeline
+.PHONY: everybody go post refresh repost timeline-graph timeline timeline-short
 
 everybody:
 	./follow-everybody.bash
@@ -13,7 +13,7 @@ refresh:
 	git fetch --all
 
 repost:
-	git cherry-pick $(p)
+	git cherry-pick -x $(p)
 
 timeline-graph:
 	git log --graph --all --decorate --oneline

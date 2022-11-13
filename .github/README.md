@@ -114,7 +114,11 @@ git fetch <git name>
 - to repeat someone else's utterance:
 
 ```
+<<<<<<< HEAD
 git cherry-pick <their commit hash>
+=======
+git cherry-pick -x <their commit hash>
+>>>>>>> yan/main
 ```
 
 - [people to follow](https://github.com/diracdeltas/tweets/network/members)
